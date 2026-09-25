@@ -3,11 +3,19 @@
 
 <head>
   <title>Question 3- CSS & HTML</title>
+
+  <!--
+  Accessibility updates for Question 3:
+  1. Replaced the <div> with a native <button> so screen readers recognize it correctly and keyboard users can focus and trigger it.
+  2. Updated to a white background with black text, and set the button text to black on green for higher contrast, benefiting users with low vision.
+  3. These color combinations meet the WCAG 2.1 1.4.3 Contrast AA contrast standards.
+  -->
+
   <style>
     .button {
       background-color: #4CAF50;
       border: none;
-      color: white;
+      color: black;
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
@@ -19,22 +27,29 @@
 
     body {
       padding: 20px;
-      background-color: #2f2f2f;
+      background-color: white;
     }
 
-    h1, h2, p {
+    h1,
+    h2,
+    p {
       color: black;
     }
   </style>
 </head>
 
 <body>
-  
+
   <h1>HTML made Easy</h1>
 
   <p>What causes errors in HTML?</p>
-
-  <div class="button">Submit answers</div>
+  <!--
+Accessibility change: Replaced the div with a native button.
+A div has no button semantics, so screen readers do not identify it
+as a button, and keyboard users cannot activate it by default.
+The button element provides these behaviors automatically.
+-->
+  <button type="button" class="button">Submit answers</button>
 
 </body>
 

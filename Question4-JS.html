@@ -3,20 +3,30 @@
 
 <head>
     <title>Question 4 - JavaScript</title>
-
 </head>
+
+<!--
+Accessibility changes for Question 4:
+1. Added an onfocus event to the button so keyboard users can display
+"Hello World" by pressing Tab.
+2. The onmouseover event remains so the mouse hover still works.
+-->
 
 <body>
     <h1>HTML DOM Events</h1>
     <p>Trigger a function on hover that will output "Hello World":</p>
 
-    <button onmouseover="myFunction()">Action!</button>
+    <!-- Keep the mouse hover action and add focus so keyboard users
+     can display the text by pressing Tab to reach the button. -->
+    <button onmouseover="myFunction()" onfocus="myFunction()">Action!</button>
     <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            // Suggestion: textContent would be more appropriate here because the output is plain text.
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
+    </script>
 </body>
-<script>
-    function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello World";
-    }
-</script>
 
 </html>
