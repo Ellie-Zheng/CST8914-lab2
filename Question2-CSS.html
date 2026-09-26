@@ -6,21 +6,22 @@
 
   <!--
   Accessibility changes for Question 2:
-  1. Replaced the image of text with a real text heading so the title can be read by screen readers and resized more easily.
-  2. Underlined the links so they are clearly identifiable.
-  3. Added a visible focus outline so keyboard users can tell which link currently has focus.
+  1. Removed text-decoration: none; for the link to restore the default browser styling.
+  2. Removed outline: none; for the link focus to restore the default browser styling.
+  3. Replaced the image of text with a real text heading so the title can be read by screen readers and resized more easily.  
   -->
 
   <style>
     .mainsection a {
-      text-decoration: underline;
       color: #414040;
-      outline: none;
     }
 
-    .mainsection a:focus-visible {
-      outline: 3px solid #ee6a0b;
-      outline-offset: 3px;
+    .mainsection h1 {
+      display: inline-block;
+      background-image: url(lab2/backgroundimg.gif);
+      background-repeat: repeat;
+      background-size: 1em 1em;
+      padding: 0.5em 0.5em;
     }
     
   </style>
